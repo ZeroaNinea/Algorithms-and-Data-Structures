@@ -1,5 +1,5 @@
 const logNums = (n: number): void => {
-  let arr = [];
+  let arr: number[] = [];
   for (let i = 1; i <= n; i++) {
     arr.push(i);
   }
