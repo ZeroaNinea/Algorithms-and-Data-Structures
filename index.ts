@@ -8,5 +8,5 @@ console.log(212, 'F = ', toCelsius(212), 'C');
 console.log('============================');
 
 console.log('Log Numbers');
-logNums(2);
+logNums(10);
 console.log('============================');
