@@ -15,4 +15,6 @@ console.log('============================');
 
 console.log('Fibonacci Sequence');
 console.log(fibonacci(2));
+console.log(fibonacci(3));
+console.log(fibonacci(7));
 console.log('============================');
