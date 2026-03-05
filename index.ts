@@ -2,6 +2,7 @@ import { toFahrenheit, toCelsius } from './celsius-fahrenheit/index.js';
 import { logNums, logPairs } from './log-nums/index.js';
 import { fibonacci } from './algorithms/fibonacci-sequence.js';
 import { factorial } from './algorithms/factorial.js';
+import { isPrime } from './algorithms/is-prime.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
@@ -24,4 +25,10 @@ console.log('Factorial');
 console.log(factorial(0));
 console.log(factorial(1));
 console.log(factorial(5));
+console.log('============================');
+
+console.log('Is Prime');
+console.log(isPrime(1));
+console.log(isPrime(5));
+console.log(isPrime(4));
 console.log('============================');
