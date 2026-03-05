@@ -3,6 +3,7 @@ import { logNums, logPairs } from './log-nums/index.js';
 import { fibonacci } from './algorithms/fibonacci-sequence.js';
 import { factorial } from './algorithms/factorial.js';
 import { isPrime } from './algorithms/is-prime.js';
+import { isPowerOfTwo } from './algorithms/is-power-of-two.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
@@ -31,4 +32,10 @@ console.log('Is Prime');
 console.log(isPrime(1));
 console.log(isPrime(5));
 console.log(isPrime(4));
+console.log('============================');
+
+console.log('Is Power of Two');
+console.log(isPowerOfTwo(1));
+console.log(isPowerOfTwo(2));
+console.log(isPowerOfTwo(5));
 console.log('============================');
