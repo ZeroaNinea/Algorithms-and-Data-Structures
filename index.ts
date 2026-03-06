@@ -1,6 +1,9 @@
 import { toFahrenheit, toCelsius } from './celsius-fahrenheit/index.js';
 import { logNums, logPairs } from './log-nums/index.js';
-import { fibonacci } from './algorithms/fibonacci-sequence.js';
+import {
+  fibonacci,
+  fibonacciRecursive,
+} from './algorithms/fibonacci-sequence.js';
 import { factorial } from './algorithms/factorial.js';
 import { isPrime } from './algorithms/is-prime.js';
 import { isPowerOfTwo } from './algorithms/is-power-of-two.js';
@@ -20,6 +23,10 @@ console.log('Fibonacci Sequence');
 console.log(fibonacci(2));
 console.log(fibonacci(3));
 console.log(fibonacci(7));
+console.log('Fibonacci Recursive');
+console.log(fibonacciRecursive(0));
+console.log(fibonacciRecursive(1));
+console.log(fibonacciRecursive(6));
 console.log('============================');
 
 console.log('Factorial');

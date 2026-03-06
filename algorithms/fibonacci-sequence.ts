@@ -7,3 +7,11 @@ export function fibonacci(n: number) {
 
   return fib;
 }
+
+export function fibonacciRecursive(n: number): number {
+  if (n < 2) {
+    return n;
+  }
+
+  return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+}
