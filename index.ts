@@ -75,7 +75,7 @@ console.log('============================');
 }
 
 {
-  const arr = [5, 4, 3, 2, 1];
+  const arr = [4, 5, 2, 1, 3];
   console.log('Bubble Sort');
   console.log(arr);
   bubbleSort(arr);
