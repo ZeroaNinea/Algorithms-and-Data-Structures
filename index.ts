@@ -7,6 +7,7 @@ import {
 import { factorial, factorialRecursive } from './algorithms/factorial.js';
 import { isPrime } from './algorithms/is-prime.js';
 import { isPowerOfTwo } from './algorithms/is-power-of-two.js';
+import { linearSearch } from './algorithms/search.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
@@ -49,4 +50,10 @@ console.log('Is Power of Two');
 console.log(isPowerOfTwo(1));
 console.log(isPowerOfTwo(2));
 console.log(isPowerOfTwo(5));
+console.log('============================');
+
+console.log('Linear Search');
+console.log(linearSearch([1, 2, 3, 4, 5], 3));
+console.log(linearSearch([1, 2, 3, 4, 5], 6));
+console.log(linearSearch([1, 2, 3, 4, 5], 0));
 console.log('============================');
