@@ -7,7 +7,11 @@ import {
 import { factorial, factorialRecursive } from './algorithms/factorial.js';
 import { isPrime } from './algorithms/is-prime.js';
 import { isPowerOfTwo } from './algorithms/is-power-of-two.js';
-import { linearSearch, binarySearch } from './algorithms/search.js';
+import {
+  linearSearch,
+  binarySearch,
+  binarySearchRecursive,
+} from './algorithms/search.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
@@ -62,5 +66,9 @@ console.log('============================');
   console.log(binarySearch(arr, 3));
   console.log(binarySearch(arr, 6));
   console.log(binarySearch(arr, 0));
+  console.log('Binary Search Recursive');
+  console.log(binarySearchRecursive(arr, 3));
+  console.log(binarySearchRecursive(arr, 6));
+  console.log(binarySearchRecursive(arr, 0));
   console.log('============================');
 }
