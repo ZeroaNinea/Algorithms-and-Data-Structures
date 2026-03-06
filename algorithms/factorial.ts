@@ -7,3 +7,11 @@ export function factorial(n: number): number {
 
   return result;
 }
+
+export function factorialRecursive(n: number): number {
+  if (n < 2) {
+    return 1;
+  }
+
+  return n * factorialRecursive(n - 1);
+}

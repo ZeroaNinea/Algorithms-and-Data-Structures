@@ -4,7 +4,7 @@ import {
   fibonacci,
   fibonacciRecursive,
 } from './algorithms/fibonacci-sequence.js';
-import { factorial } from './algorithms/factorial.js';
+import { factorial, factorialRecursive } from './algorithms/factorial.js';
 import { isPrime } from './algorithms/is-prime.js';
 import { isPowerOfTwo } from './algorithms/is-power-of-two.js';
 
@@ -33,6 +33,10 @@ console.log('Factorial');
 console.log(factorial(0));
 console.log(factorial(1));
 console.log(factorial(5));
+console.log('Factorial Recursive');
+console.log(factorialRecursive(0));
+console.log(factorialRecursive(1));
+console.log(factorialRecursive(5));
 console.log('============================');
 
 console.log('Is Prime');
