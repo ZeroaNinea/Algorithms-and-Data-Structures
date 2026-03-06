@@ -12,7 +12,7 @@ import {
   binarySearch,
   binarySearchRecursive,
 } from './algorithms/search.js';
-import { bubbleSort, insertionSort } from './algorithms/sorting.js';
+import { bubbleSort, insertionSort, quickSort } from './algorithms/sorting.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
@@ -88,6 +88,15 @@ console.log('============================');
   console.log('Insertion Sort');
   console.log(arr);
   insertionSort(arr);
+  console.log(arr);
+  console.log('============================');
+}
+
+{
+  const arr = [4, 5, 2, 1, 3];
+  console.log('Quick Sort');
+  console.log(arr);
+  quickSort(arr, 0, arr.length - 1);
   console.log(arr);
   console.log('============================');
 }
