@@ -52,8 +52,11 @@ console.log(isPowerOfTwo(2));
 console.log(isPowerOfTwo(5));
 console.log('============================');
 
-console.log('Linear Search');
-console.log(linearSearch([1, 2, 3, 4, 5], 3));
-console.log(linearSearch([1, 2, 3, 4, 5], 6));
-console.log(linearSearch([1, 2, 3, 4, 5], 0));
-console.log('============================');
+{
+  console.log('Linear Search');
+  const arr = [1, 2, 3, 4, 5];
+  console.log(linearSearch(arr, 3));
+  console.log(linearSearch(arr, 6));
+  console.log(linearSearch(arr, 0));
+  console.log('============================');
+}
