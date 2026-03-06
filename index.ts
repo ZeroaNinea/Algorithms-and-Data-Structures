@@ -18,6 +18,7 @@ import {
   quickSort,
   mergeSort,
 } from './algorithms/sorting.js';
+import { cartesianProduct } from './algorithms/cartesian-product.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
@@ -112,5 +113,13 @@ console.log('============================');
   console.log(arr);
   mergeSort(arr);
   console.log(arr);
+  console.log('============================');
+}
+
+{
+  const arr1 = [1, 2, 3];
+  const arr2 = [4, 5, 6];
+  console.log('Cartesian Product');
+  console.log(cartesianProduct(arr1, arr2));
   console.log('============================');
 }
