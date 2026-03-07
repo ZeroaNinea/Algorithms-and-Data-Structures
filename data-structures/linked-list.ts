@@ -105,6 +105,18 @@ class LinkedList<T> {
     return -1;
   }
 
+  reverse() {
+    let current = this.head;
+    let prev = null;
+    while (current) {
+      const next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+    this.head = prev;
+  }
+
   print() {
     if (this.isEmpty()) {
       return undefined;
@@ -139,4 +151,6 @@ list.print();
 console.log(list.search(3));
 console.log(list.removeFrom(100));
 list.removeValue(3);
+list.print();
+list.reverse();
 list.print();
