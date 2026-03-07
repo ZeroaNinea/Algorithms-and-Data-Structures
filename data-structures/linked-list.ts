@@ -41,13 +41,43 @@ class LinkedList<T> {
     }
     this.size++;
   }
+
+  append(value: T) {
+    const node = new Node(value);
+    if (this.isEmpty()) {
+      this.head = node;
+      this.tail = node;
+    } else {
+      this.tail!.next = node;
+      this.tail = node;
+    }
+    this.size++;
+  }
+
+  print() {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+    let current = this.head;
+    let str = '';
+    while (current) {
+      str += current.value + ' ';
+      current = current.next;
+    }
+    console.log(str);
+  }
 }
 
 const list = new LinkedList<number>();
 console.log(list.isEmpty());
 console.log(list.getSize());
+list.print();
 list.prepend(1);
 list.prepend(2);
 list.prepend(3);
 console.log(list.isEmpty());
 console.log(list.getSize());
+list.print();
+list.append(4);
+list.prepend(5);
+list.print();
