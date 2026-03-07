@@ -20,6 +20,7 @@ import {
 } from './algorithms/sorting.js';
 import { cartesianProduct } from './algorithms/cartesian-product.js';
 import { climbingStaircase } from './algorithms/climbing-staircase.js';
+import { towerOfHanoi } from './algorithms/tower-of-hanoi.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
@@ -129,4 +130,8 @@ console.log('Climbing Staircase');
 console.log(climbingStaircase(1));
 console.log(climbingStaircase(2));
 console.log(climbingStaircase(5));
+console.log('============================');
+
+console.log('Tower of Hanoi');
+towerOfHanoi(3, 'A', 'C', 'B');
 console.log('============================');
