@@ -22,7 +22,8 @@ import { cartesianProduct } from './algorithms/cartesian-product.js';
 import { climbingStaircase } from './algorithms/climbing-staircase.js';
 import { towerOfHanoi } from './algorithms/tower-of-hanoi.js';
 
-import './data-structures/arrays.js';
+import './data-structures/array.js';
+import './data-structures/object.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
