@@ -74,6 +74,33 @@ class LinkedList<T> {
     }
   }
 
+  removeFrom(index: number) {
+    if (index < 0 || index >= this.size) {
+      return;
+    }
+    if (index === 0) {
+      this.head = this.head!.next;
+    } else {
+      let current = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        current = current!.next;
+      }
+      current!.next = current!.next!.next;
+    }
+    this.size--;
+  }
+
+  search(value: T) {
+    let current = this.head;
+    for (let i = 0; i < this.size; i++) {
+      if (current!.value === value) {
+        return i;
+      }
+      current = current!.next;
+    }
+    return -1;
+  }
+
   print() {
     if (this.isEmpty()) {
       return undefined;
@@ -103,3 +130,6 @@ list.prepend(5);
 list.print();
 list.insert(2, 6);
 list.print();
+list.removeFrom(2);
+list.print();
+console.log(list.search(3));
