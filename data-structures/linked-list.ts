@@ -130,6 +130,7 @@ list.prepend(5);
 list.print();
 list.insert(2, 6);
 list.print();
-list.removeFrom(2);
+console.log(list.removeFrom(2));
 list.print();
 console.log(list.search(3));
+console.log(list.removeFrom(100));
