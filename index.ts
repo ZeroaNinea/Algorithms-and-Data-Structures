@@ -24,6 +24,7 @@ import { towerOfHanoi } from './algorithms/tower-of-hanoi.js';
 
 import './data-structures/array.js';
 import './data-structures/object.js';
+import './data-structures/set.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
