@@ -117,6 +117,21 @@ class LinkedList<T> {
     this.head = prev;
   }
 
+  removeFromFront() {
+    this.head = this.head!.next;
+    this.size--;
+  }
+
+  removeFromBack() {
+    let current = this.head;
+    for (let i = 0; i < this.size - 2; i++) {
+      current = current!.next;
+    }
+    current!.next = null;
+    this.tail = current;
+    this.size--;
+  }
+
   print() {
     if (this.isEmpty()) {
       return undefined;
@@ -153,4 +168,8 @@ console.log(list.removeFrom(100));
 list.removeValue(3);
 list.print();
 list.reverse();
+list.print();
+list.removeFromFront();
+list.print();
+list.removeFromBack();
 list.print();
