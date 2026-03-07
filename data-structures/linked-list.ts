@@ -90,6 +90,10 @@ class LinkedList<T> {
     this.size--;
   }
 
+  removeValue(value: T) {
+    this.removeFrom(this.search(value));
+  }
+
   search(value: T) {
     let current = this.head;
     for (let i = 0; i < this.size; i++) {
@@ -134,3 +138,5 @@ console.log(list.removeFrom(2));
 list.print();
 console.log(list.search(3));
 console.log(list.removeFrom(100));
+list.removeValue(3);
+list.print();
