@@ -26,6 +26,7 @@ import './data-structures/array.js';
 import './data-structures/object.js';
 import './data-structures/set.js';
 import './data-structures/map.js';
+import './data-structures/stack.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
