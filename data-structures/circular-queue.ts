@@ -2,41 +2,55 @@ console.log('============================');
 console.log('Circular Queue');
 
 class CircularQueue<T> {
-  private queue: T[] = [];
-  private head = 0;
-  private tail = 0;
+  private items: T[] = [];
+  private capacity: number;
+  private currentLength: number;
+  private rear: number;
+  private front: number;
 
-  enqueue(item: T): void {
-    this.queue[this.tail] = item;
-    this.tail = (this.tail + 1) % this.queue.length;
+  constructor(capacity: number) {
+    this.capacity = capacity;
+    this.items = new Array(capacity);
+    this.currentLength = 0;
+    this.rear = -1;
+    this.front = -1;
+  }
+
+  isFull(): boolean {
+    return this.currentLength === this.capacity;
+  }
+
+  isEmpty(): boolean {
+    return this.currentLength === 0;
+  }
+
+  enqcueue(item: T): void {
+    if (this.isFull()) {
+      throw new Error('X_X Queue is full.');
+    }
+
+    this.rear = (this.rear + 1) % this.capacity;
+    this.items[this.rear] = item;
+    this.currentLength++;
   }
 
   dequeue(): T | undefined {
-    const item = this.queue[this.head];
-    this.head = (this.head + 1) % this.queue.length;
-    return item;
-  }
+    if (this.isEmpty()) {
+      throw new Error('X_X Queue is empty.');
+    }
 
-  peek(): T | undefined {
-    return this.queue[this.head];
-  }
-
-  get size(): number {
-    return (this.tail - this.head + this.queue.length) % this.queue.length;
-  }
-
-  get isEmpty(): boolean {
-    return this.size === 0;
+    this.front = (this.front + 1) % this.capacity;
+    this.currentLength--;
+    return this.items[this.front];
   }
 }
 
-const circularQueue = new CircularQueue<number>();
-circularQueue.enqueue(1);
-circularQueue.enqueue(2);
-circularQueue.enqueue(3);
+const circularQueue = new CircularQueue<number>(3);
+circularQueue.enqcueue(1);
+circularQueue.enqcueue(2);
+circularQueue.enqcueue(3);
 console.log(circularQueue.dequeue());
-console.log(circularQueue.peek());
 console.log(circularQueue.dequeue());
-console.log(circularQueue.peek());
-console.log(circularQueue.size);
+console.log(circularQueue.dequeue());
 console.log(circularQueue.isEmpty);
+console.log(circularQueue.isFull);
