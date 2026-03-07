@@ -30,6 +30,7 @@ import './data-structures/stack.js';
 import './data-structures/queue.js';
 import './data-structures/circular-queue.js';
 import './data-structures/linked-list.js';
+import './data-structures/linked-list-stack.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');

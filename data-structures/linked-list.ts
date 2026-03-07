@@ -1,7 +1,7 @@
 console.log('============================');
 console.log('Linked List');
 
-class Node<T> {
+export class Node<T> {
   value: T;
   next: Node<T> | null;
 
@@ -11,7 +11,7 @@ class Node<T> {
   }
 }
 
-class LinkedList<T> {
+export class LinkedList<T> {
   head: Node<T> | null;
   tail: Node<T> | null;
   size: number;
@@ -120,6 +120,12 @@ class LinkedList<T> {
   removeFromFront() {
     this.head = this.head!.next;
     this.size--;
+
+    if (this.isEmpty()) {
+      this.tail = null;
+    }
+
+    return this.head;
   }
 
   removeFromBack() {
