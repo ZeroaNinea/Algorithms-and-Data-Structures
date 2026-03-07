@@ -19,6 +19,7 @@ import {
   mergeSort,
 } from './algorithms/sorting.js';
 import { cartesianProduct } from './algorithms/cartesian-product.js';
+import { climbingStaircase } from './algorithms/climbing-staircase.js';
 
 console.log('============================');
 console.log('Celsius — Fahrenheit');
@@ -123,3 +124,9 @@ console.log('============================');
   console.log(cartesianProduct(arr1, arr2));
   console.log('============================');
 }
+
+console.log('Climbing Staircase');
+console.log(climbingStaircase(1));
+console.log(climbingStaircase(2));
+console.log(climbingStaircase(5));
+console.log('============================');
